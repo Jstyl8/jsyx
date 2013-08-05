@@ -1,0 +1,25 @@
+*************************************************BUGS************************************************************************
++ Al incrementar un s’mbolo problemas o al sumarse as’ mismo
++ A la hora de hacer un if con byte/long/short peta, solo funciona con ints
++ En el backtraking no elimina todas las constraints del ultimo "punto de control"
++ Al hacer dos asignaciones X = N y X = B con B simbolo y N cualquier cosa, al mostrar solucion el dominio de B == NULL 
+- Faltan metodos nativos en BT
++ El long y double crea un operando de mas en locals -> Añadido caso especial para long y double en nuestra impl
+- Bounds de Integer y Long -> Al poner Options.V_BOUND te crea una variable con rangos autom‡ticos
+- Solo imprime una solucion y no un rango de soluciones con los enteros( reales no hay problema)
+? Contraint para cuando objeto es NULL?
+? "Generacion de ramas" con getfield y putfield igual usando mismo lastdecision que para saltos?¿ - Parece que funciona con el mismo boolean
+
+
+
+
+
+
+
+
+
+
+////////////////////
+- Sin solucionar
++ Solucionado
+? Duda
