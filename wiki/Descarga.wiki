@@ -1,0 +1,7 @@
+#summary Página de descarga
+
+= Introduction =
+
+Cliente para el uso de jSyX.
+
+  * Descargalo desde *aquí* 
