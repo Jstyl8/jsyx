@@ -1,0 +1,86 @@
+Lo que queremos con la ejecuci—n s’mbolica es tenerun arbol de ejecuci—n con todas las posibles salidas del programa
+
+Ej 
+public int foo(int x){
+	if (x > 5) {
+		return 1;
+	}
+	else if (x == 0){
+		return 2;
+	else {
+		return 3;
+	}
+}
+
+Todas las entradas van a ser s’mbolos ya que queremos saber todos los caminos posibles dado unas entradas
+En el ejemplo tenemos 3 opciones x > 5, x == 0 o x <=5 && x!= 0. Estas decisiones son las constraints 
+que ir‡n enlazadas con su correspondiente Variable(Choco) que concuerda con el nombre del s’mbolo.
+Las constraints las iremos almacenando en el model del ConstraintSolver segœn el camino que cojamos.
+En nuestro programa siempre coge la opcion false de primeras(salvo en los loops que est‡n implementados de forma que los coge true).
+
+En cada decision que tomemos se crear‡ una nueva rama en el arbol as’ el primer camino que coger‡ ser‡ :
+
+x <= 5  && x!= 0;
+
+Ejecutariamos el resolutor(Solver) y obtendriamos que la entrada x estar‡ en el rango de las constraints y devolveriamos 3
+
+Luego har’amos un bactraking normal eliminando las constraints acumuladas y as’ hasta llegar al m‡ximo nivel prefijado o con todos los caminos
+
+
+La cosa se complica cuando metemos algun asignaci—n relacionada con algœn s’mbolo o consigo mismo
+
+public int foo(int x, int y){
+	x = x + y
+	if (x > 5) {
+		return 1;
+	}
+	else if (x == 0){
+		return 2;
+	else {
+		return 3;
+	}
+}
+
+En este caso tendriamos que a–adir las constraint que x = x +y pero al ser el mismo el resolutor nos devolver’a que es irresoluble 
+esa constraint
+Por eso creamos una copia de si mismo x1 = x + y y ya podemos a–adir es constraint al Model y la ejecuci—n seguir’a su curso
+
+
+Los temporales los creo cuando asignamos a algœn no s’mbolo un s’mbolo
+
+
+public int foo(int x){
+	int y = x + 5
+	if (x > 5) {
+		return 1;
+	}
+	else if (x == 0){
+		return 2;
+	else {
+		return 3;
+	}
+}
+
+A–adir’amos la contraint Temp1(y) = x +5;
+Pero nos encontramos un problema en la suma como en este caso
+
+public int foo(int x, int y){
+	if (x > y+5) {
+		return 1;
+	}
+	else if (x == 0){
+		return 2;
+	else {
+		return 3;
+	}
+}
+
+Como al sumar no sabemos lo que tenemos detr‡s, si un store o un if, necesitamos crear un nuevo JValue y una nueva Variable en el
+modelo con el consiguiente constraint Temp2 = y +5 y posteriormente si existe un if x = Temp1 o x != Temp1 depende del camino que escojamos
+
+
+M‡s o menos eso es todo lo que necesitas saber con los enteros con objetos tendremos que pensar como funcionar’a
+A lo mejor es un poco b‡sico en algunas cosas pero mejor no dejarme nada
+:O! puta
+ 
+

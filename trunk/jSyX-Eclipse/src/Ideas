@@ -1,0 +1,14 @@
+-------Simbolica con objetos--------
+//esto en TestJVMSymb
+la creacion del objeto tendríamos que hacerla a mano, como representar objeto en choco?
+Para sus fields habría que hacer que los JValues fueran simbolos y especificar tmb los bounds para cada field cuando se esta creando
+
+Al crear cada uno de los valores del Object tendriamos que hacerlo simbolos y meterlos en el model con un nombre como Obj1Campo3
+
+//esto en la parte de ejecucion de JVM
+-getfield
+si no es null ejecucion normal cogiendo el valor del simbol
+si es null usar ejecutarathrow creandonos un throwable("null") en la pila a mano para lanzarlo  y k la makina siga su ritmo
+-putfield
+si no es null poniendo el valor del field k sera tmb un simbol, habria k tener en cuenta historia de asignaciones tmb
+igual getfield

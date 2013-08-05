@@ -1,0 +1,20 @@
+Test  Thu Jun 13 12:02:35 BST 2013
+Path -> D:\J\PROGRAMACION\JAVA\workspaces\H2010\jSyX-Eclipse
+Class:Method -> com.bcel.test.Test:abs
+
+Inputs Types
+A [-10, 10] -> Integer
+
++Path 0
+Solution:
+-Inputs
+A = A:0
+
+-Output
+Temp1:5
+
+Stadistics:
+Total branches: 2
+Success branches: 1
+Fail branches: 1
+Percent success branches:50%
