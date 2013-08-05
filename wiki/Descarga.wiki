@@ -4,4 +4,4 @@
 
 Cliente para el uso de jSyX.
 
-  * Descargalo desde *aquí* 
+  * Descárgalo desde *[https://jsyx.googlecode.com/svn/trunk/jSyX-Eclipse/jsyx.jar aquí]* 
