@@ -1,7 +1,12 @@
 #summary Página de descarga
+#labels Featured
 
 = Introduction =
 
 Cliente para el uso de jSyX.
 
   * Descárgalo desde *[https://jsyx.googlecode.com/svn/trunk/jSyX-Eclipse/jsyx.jar aquí]* 
+
+Memoria del proyecto
+
+  * Descárgala desde [http://www.jstyl8.net46.net/doc/Memoria.pdf aquí]
