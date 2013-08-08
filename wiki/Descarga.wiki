@@ -1,7 +1,7 @@
 #summary Página de descarga
 #labels Featured
 
-= Introduction =
+= Descargas =
 
 Cliente para el uso de jSyX.
 
