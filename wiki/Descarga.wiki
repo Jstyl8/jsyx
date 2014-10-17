@@ -9,4 +9,4 @@ Cliente para el uso de jSyX.
 
 Memoria del proyecto
 
-  * Descárgala desde [http://www.jstyl8.net46.net/doc/Memoria.pdf aquí]
+  * Descárgala desde [http://www.jstyl8.net46.net/assets/doc/Memoria.pdf aquí]
