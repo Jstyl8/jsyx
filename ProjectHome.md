@@ -1,0 +1,1 @@
+Una máquina de ejecución simbólica para Java Bytecode y su aplicación a la generación de tests para programas Java.
